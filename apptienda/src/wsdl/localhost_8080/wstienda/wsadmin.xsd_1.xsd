@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3.payara-p6 (FISH-5811-df8dba8; 2021-12-02T15:42:59+0000) JAXWS-RI/2.3.2.payara-p4 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://wsservicios/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://wsservicios/">
+
+<xs:element name="asignarPT" type="tns:asignarPT"/>
+
+<xs:element name="asignarPTResponse" type="tns:asignarPTResponse"/>
+
+<xs:element name="firspricestock" type="tns:firspricestock"/>
+
+<xs:element name="firspricestockResponse" type="tns:firspricestockResponse"/>
+
+<xs:element name="insertarcatego" type="tns:insertarcatego"/>
+
+<xs:element name="insertarcategoResponse" type="tns:insertarcategoResponse"/>
+
+<xs:element name="insertarproducto" type="tns:insertarproducto"/>
+
+<xs:element name="insertarproductoResponse" type="tns:insertarproductoResponse"/>
+
+<xs:element name="insertartempo" type="tns:insertartempo"/>
+
+<xs:element name="insertartempoResponse" type="tns:insertartempoResponse"/>
+
+<xs:element name="listarPorIDcategoria" type="tns:listarPorIDcategoria"/>
+
+<xs:element name="listarPorIDcategoriaResponse" type="tns:listarPorIDcategoriaResponse"/>
+
+<xs:element name="listarcategorias" type="tns:listarcategorias"/>
+
+<xs:element name="listarcategoriasResponse" type="tns:listarcategoriasResponse"/>
+
+<xs:element name="listarproveedor1" type="tns:listarproveedor1"/>
+
+<xs:element name="listarproveedor1Response" type="tns:listarproveedor1Response"/>
+
+<xs:element name="listartempos" type="tns:listartempos"/>
+
+<xs:element name="listartemposResponse" type="tns:listartemposResponse"/>
+
+<xs:element name="listarultimoproduct" type="tns:listarultimoproduct"/>
+
+<xs:element name="listarultimoproductResponse" type="tns:listarultimoproductResponse"/>
+
+<xs:element name="precio" type="tns:precio"/>
+
+<xs:element name="precioResponse" type="tns:precioResponse"/>
+
+<xs:element name="precioporid" type="tns:precioporid"/>
+
+<xs:element name="precioporidResponse" type="tns:precioporidResponse"/>
+
+<xs:element name="principalescat" type="tns:principalescat"/>
+
+<xs:element name="principalescatResponse" type="tns:principalescatResponse"/>
+
+<xs:element name="productolista" type="tns:productolista"/>
+
+<xs:element name="productolistaResponse" type="tns:productolistaResponse"/>
+
+<xs:element name="seguntempo" type="tns:seguntempo"/>
+
+<xs:element name="seguntempoResponse" type="tns:seguntempoResponse"/>
+
+<xs:element name="subcat" type="tns:subcat"/>
+
+<xs:element name="subcatResponse" type="tns:subcatResponse"/>
+
+<xs:element name="tempoporid" type="tns:tempoporid"/>
+
+<xs:element name="tempoporidResponse" type="tns:tempoporidResponse"/>
+
+<xs:element name="verseguntempo" type="tns:verseguntempo"/>
+
+<xs:element name="verseguntempoResponse" type="tns:verseguntempoResponse"/>
+
+<xs:complexType name="listarcategorias">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarcategoriasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:categoria" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="categoria">
+<xs:sequence>
+<xs:element name="direccionimg" type="xs:string" minOccurs="0"/>
+<xs:element name="idcategoria" type="xs:int"/>
+<xs:element name="idcategoria2" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarproveedor1">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarproveedor1Response">
+<xs:sequence>
+<xs:element name="return" type="tns:list1Proveedor" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="list1Proveedor">
+<xs:sequence>
+<xs:element name="dire" type="xs:string" minOccurs="0"/>
+<xs:element name="idpe" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="tel" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="principalescat">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="principalescatResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:categoria" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarcatego">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="subcategoria" type="xs:int"/>
+<xs:element name="direccionimage" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarcategoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subcat">
+<xs:sequence>
+<xs:element name="idcategoria" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subcatResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:categoria" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seguntempo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="seguntempoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:seguntempoc" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seguntempoc">
+<xs:sequence>
+<xs:element name="direimg" type="xs:string" minOccurs="0"/>
+<xs:element name="fi" type="xs:string" minOccurs="0"/>
+<xs:element name="fn" type="xs:string" minOccurs="0"/>
+<xs:element name="idtempo" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tempoporid">
+<xs:sequence>
+<xs:element name="idt" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tempoporidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:seguntempoc" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarPorIDcategoria">
+<xs:sequence>
+<xs:element name="idcategoria" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarPorIDcategoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:categoria" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertartempo">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="fechainicio" type="xs:string" minOccurs="0"/>
+<xs:element name="fechafin" type="xs:string" minOccurs="0"/>
+<xs:element name="direccionimage" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertartempoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="asignarPT">
+<xs:sequence>
+<xs:element name="idtempo" type="xs:int"/>
+<xs:element name="id product" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="asignarPTResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="firspricestock">
+<xs:sequence>
+<xs:element name="fechaad" type="xs:string" minOccurs="0"/>
+<xs:element name="cost" type="xs:float"/>
+<xs:element name="stockmin" type="xs:int"/>
+<xs:element name="stockmax" type="xs:int"/>
+<xs:element name="idproveedor" type="xs:int"/>
+<xs:element name="porcent" type="xs:float"/>
+<xs:element name="exist" type="xs:int"/>
+<xs:element name="idproducto" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="firspricestockResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="precio">
+<xs:sequence>
+<xs:element name="pro" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="precioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pricestock" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pricestock">
+<xs:sequence>
+<xs:element name="existencia" type="xs:int"/>
+<xs:element name="idpc" type="xs:int"/>
+<xs:element name="idpro" type="xs:int"/>
+<xs:element name="precio" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarproducto">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="desc" type="xs:string" minOccurs="0"/>
+<xs:element name="direccionimage" type="xs:string" minOccurs="0"/>
+<xs:element name="idcate" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarproductoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listartempos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listartemposResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:seguntempoc" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="precioporid">
+<xs:sequence>
+<xs:element name="pro" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="precioporidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:producto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="producto">
+<xs:sequence>
+<xs:element name="desc" type="xs:string" minOccurs="0"/>
+<xs:element name="idcat" type="xs:int"/>
+<xs:element name="idp" type="xs:int"/>
+<xs:element name="img" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarultimoproduct">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarultimoproductResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:lastproduct" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lastproduct">
+<xs:sequence>
+<xs:element name="idlastproduct" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verseguntempo">
+<xs:sequence>
+<xs:element name="idtempo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verseguntempoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:producto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productolista">
+<xs:sequence>
+<xs:element name="idcategoria" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productolistaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:producto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
